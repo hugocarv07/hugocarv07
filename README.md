@@ -56,3 +56,6 @@
 <div align="center">
   ✨ “O código é como o humor. Quando você tem que explicá-lo, ele não é bom.” – Cory House
 </div>
+<p align="center">
+  <img src="./metrics.svg" alt="GitHub Metrics" />
+</p>
