@@ -1,0 +1,21 @@
+name: Atualizar Metrics
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # Roda todo dia às 6h UTC
+  workflow_dispatch:     # Permite rodar manualmente
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, activity, community, repositories, metadata
+          plugin_languages: yes
+          plugin_stars: yes
+          plugin_lines: yes
+          plugin_traffic: yes
+          config_timezone: America/Sao_Paulo
